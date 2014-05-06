@@ -1,6 +1,9 @@
 li {
   list-style: none !important;
 }
+.filter {
+    overflow: auto;
+}
 .right-filter {
   float:right;
 }
@@ -37,7 +40,12 @@ li {
   display: inline-block;
   text-align: left;
   vertical-align: top;
-  width: 30%;
+
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  width: 24%;
+
   padding: 10px 10px 10px 10px;
   border-radius: 4px;
   -moz-border-radius: 4px;
