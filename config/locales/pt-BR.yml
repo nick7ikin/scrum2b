@@ -33,6 +33,7 @@ pt-BR:
   label_select_me: "Eu"
   label_board_status_new: "Novas Tarefas"
   label_board_status_inprogress: "Em Andamento"
+  label_board_status_ready_for_test: "Pronto para teste"
   label_board_status_completed: "Concluída"
   
   label_board_issue_text_close_issue: "Fechar Tarefa"

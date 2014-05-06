@@ -20,17 +20,25 @@
   <%=content_tag(:label, "In progress")%>
   <% all_issue_statuses = IssueStatus.all.sort %>
   <% all_issue_statuses.each do |status| %>
-    <%= check_box_tag "settings[status_inprogress][#{status.id}]", status.name, @settings['status_inprogress'] && @settings['status_inprogress'].include?(status.id.to_s) %>
-  	<%= status.name %>
-  	<br/>	
+      <%= check_box_tag "settings[status_inprogress][#{status.id}]", status.name, @settings['status_inprogress'] && @settings['status_inprogress'].include?(status.id.to_s) %>
+      <%= status.name %>
+      <br/>
+  <% end %>
+  <br/>
+  <%=content_tag(:label, "Ready for Test")%>
+  <% all_issue_statuses = IssueStatus.all.sort %>
+  <% all_issue_statuses.each do |status| %>
+      <%= check_box_tag "settings[status_ready_for_test][#{status.id}]", status.name, @settings['status_ready_for_test'] && @settings['status_ready_for_test'].include?(status.id.to_s) %>
+      <%= status.name %>
+      <br/>
   <% end %>
   <br/>
   <%=content_tag(:label, "Completed")%>
   <% all_issue_statuses = IssueStatus.all.sort %>
   <% all_issue_statuses.each do |status| %>
-    <%= check_box_tag "settings[status_completed][#{status.id}]", status.name, @settings['status_completed'] && @settings['status_completed'].include?(status.id.to_s) %>
-  	<%= status.name %>
-  	<br/>	
+      <%= check_box_tag "settings[status_completed][#{status.id}]", status.name, @settings['status_completed'] && @settings['status_completed'].include?(status.id.to_s) %>
+      <%= status.name %>
+      <br/>
   <% end %>
   <br/>
   <%=content_tag(:label, "Closed")%>

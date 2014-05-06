@@ -33,6 +33,7 @@ en:
   label_select_me: "Me"
   label_board_status_new: "New Issues"
   label_board_status_inprogress: "In Progress"
+  label_board_status_ready_for_test: "Ready for Test"
   label_board_status_completed: "Completed"
   
   label_board_issue_text_close_issue: "Close Issue"

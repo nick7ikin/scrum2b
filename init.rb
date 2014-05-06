@@ -16,7 +16,7 @@ Redmine::Plugin.register :scrum2b do
   url 'https://github.com/scrum2b/scrum2b'
   author_url 'http://www.scrumtobe.com'
 
-  settings :default => {'status_no_start'=> {}, 'status_inprogress' => {}, 'status_completed' => {}, 'status_closed' => {} }, :partial => 'settings/scrum2b'
+  settings :default => {'status_no_start'=> {}, 'status_inprogress' => {}, 'status_ready_for_test' => {},  'status_completed' => {}, 'status_closed' => {} }, :partial => 'settings/scrum2b'
   
   project_module :scrum2b do
     permission :s2b_view_issue, {:s2b_lists => [:index, :filter_issues],:s2b_boards => [:index, :filter_issues]}

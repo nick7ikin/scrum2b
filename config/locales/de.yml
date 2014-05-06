@@ -31,6 +31,7 @@ de:
   label_select_me: "Ich"
   label_board_status_new: "Neue Tickets"
   label_board_status_inprogress: "in Arbeit"
+  label_board_status_ready_for_test: "Bereit für Test"
   label_board_status_completed: "abgeschlossen"
   
   label_board_issue_text_close_issue: "Ticket schließen"

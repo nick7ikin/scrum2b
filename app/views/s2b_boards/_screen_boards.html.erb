@@ -3,6 +3,7 @@
   </div>
   <% columns = [{:column_id => :new_column, :status => "status_no_start", :column_name => l(:label_board_status_new), :issues => @new_issues },
                 {:column_id => :in_progress_column, :status => "status_inprogress", :column_name => l(:label_board_status_inprogress), :issues => @in_progress_issues },
+                {:column_id => :ready_for_test_column, :status => "status_ready_for_test", :column_name => l(:label_board_status_ready_for_test), :issues => @ready_for_test_issues },
                 {:column_id => :completed_column, :status => "status_completed", :column_name => l(:label_board_status_completed), :issues => @completed_issues }
                ]
   %>

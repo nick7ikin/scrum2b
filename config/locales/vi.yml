@@ -33,6 +33,7 @@ vi:
   label_select_me: "Tôi"
   label_board_status_new: "Vấn Đề Mới"
   label_board_status_inprogress: "Vấn Đề Đang Làm"
+  label_board_status_ready_for_test: "Sẵn sàng cho thử nghiệm"
   label_board_status_completed: "Vấn Đề Đã Hoàn Thanh"
   
   label_board_issue_text_close_issue: "Đóng"

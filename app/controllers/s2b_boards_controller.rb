@@ -176,6 +176,7 @@ class S2bBoardsController < S2bApplicationController
 
     @new_issues = Issue.where(session[:conditions]).where("status_id IN (?) AND project_id IN (?) " , STATUS_IDS['status_no_start'],@hierarchy_project_id).order(:s2b_position)
     @in_progress_issues = Issue.where(session[:conditions]).where("status_id IN (?) AND project_id IN (?)" , STATUS_IDS['status_inprogress'],@hierarchy_project_id).order(:s2b_position)
+    @ready_for_test_issues = Issue.where(session[:conditions]).where("status_id IN (?) AND project_id IN (?)" , STATUS_IDS['status_ready_for_test'],@hierarchy_project_id).order(:s2b_position)
     @completed_issues = Issue.where(session[:conditions]).where("status_id IN (?) AND project_id IN (?)" , STATUS_IDS['status_completed'],@hierarchy_project_id).order(:s2b_position)
 
     respond_to do |format|
@@ -184,7 +185,7 @@ class S2bBoardsController < S2bApplicationController
                                            :locals => {:completed_issues => @completed_issues,
                                                        :project => @project,
                                                        :new_issues => @new_issues,
-                                                       :in_progress_issues => @in_progress_issues,
+                                                       :@ready_for_test_issues => @ready_for_test_issues,
                                                        :tracker => @tracker, 
                                                        :priority => @priority,
                                                        :members => @members,
@@ -207,6 +208,7 @@ class S2bBoardsController < S2bApplicationController
     @issue_no_position = Issue.where(session[:conditions]).where("s2b_position IS NULL AND project_id IN (?)",@hierarchy_project_id)
     @new_issues = Issue.where(session[:conditions]).where("status_id IS NULL or status_id IN (?) AND project_id IN (?)" , STATUS_IDS['status_no_start'],@hierarchy_project_id).order(:s2b_position)
     @in_progress_issues = Issue.where(session[:conditions]).where("status_id IN (?) AND project_id IN (?)" , STATUS_IDS['status_inprogress'],@hierarchy_project_id).order(:s2b_position)
+    @ready_for_test_issues = Issue.where(session[:conditions]).where("status_id IN (?) AND project_id IN (?)" , STATUS_IDS['status_ready_for_test'],@hierarchy_project_id).order(:s2b_position)
     @completed_issues = Issue.where(session[:conditions]).where("status_id IN (?) AND project_id IN (?)" , STATUS_IDS['status_completed'],@hierarchy_project_id).order(:s2b_position)            
   end
   

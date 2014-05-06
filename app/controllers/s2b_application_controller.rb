@@ -33,7 +33,7 @@ class S2bApplicationController < ApplicationController
   
   DEFAULT_STATUS_IDS = {}
   STATUS_IDS = {'status_no_start' => [], 'status_inprogress' => [], 
-                'status_completed' => [], 'status_closed' => []}
+                'status_completed' => [], 'status_closed' => [], 'status_ready_for_test' => []}
                 
   SELECT_ISSUE_OPTIONS = {:all_working => 1,
                           :my => 2, 
